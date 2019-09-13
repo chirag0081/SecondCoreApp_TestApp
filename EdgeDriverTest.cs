@@ -32,7 +32,7 @@ namespace EdgeDriverTest1
         {
             _driver.Url = "http://localhost:1001/login";
             _driver.Manage().Window.Maximize();
-
+            System.Threading.Thread.Sleep(1000);
             IWebElement webElementEmail = _driver.FindElementById("Email");
             webElementEmail.SendKeys("abc@gmail.com");
             IWebElement webElementPassword = _driver.FindElementById("Password");
@@ -40,14 +40,15 @@ namespace EdgeDriverTest1
 
             IWebElement elementNext = _driver.FindElementByClassName("btn");
             elementNext.Click();
-            _driver.Manage().Timeouts().ImplicitWait.Add(new System.TimeSpan(0, 0, 10));
+            
+            System.Threading.Thread.Sleep(3000);
 
             IList<IWebElement> webElementsLinks = _driver.FindElementsByClassName("nav-link");
             Assert.AreEqual(3, webElementsLinks.Count);
             Assert.AreEqual("List", webElementsLinks[0].Text);
             Assert.AreEqual("Create", webElementsLinks[1].Text);
             Assert.AreEqual("Logout abc@gmail.com", webElementsLinks[2].Text);
-
+            System.Threading.Thread.Sleep(3000);
         }
 
         [TestMethod]
@@ -55,7 +56,9 @@ namespace EdgeDriverTest1
         {
             // Replace with your own test logic
             _driver.Url = "http://localhost:1001";
+            System.Threading.Thread.Sleep(3000);
             Assert.AreEqual("ClientApp", _driver.Title);
+            
         }
 
 
