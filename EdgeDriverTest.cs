@@ -13,6 +13,7 @@ namespace EdgeDriverTest1
         // please follow the instructions from http://go.microsoft.com/fwlink/?LinkId=619687
         // to install Microsoft WebDriver.
 
+
         private EdgeDriver _driver;
         WebDriverWait wait;
         [TestInitialize]
