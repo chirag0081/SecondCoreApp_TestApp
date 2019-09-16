@@ -48,6 +48,7 @@ namespace EdgeDriverTest1
             Assert.AreEqual("List", webElementsLinks[0].Text);
             Assert.AreEqual("Create", webElementsLinks[1].Text);
             Assert.AreEqual("Logout abc@gmail.com", webElementsLinks[2].Text);
+
             System.Threading.Thread.Sleep(3000);
 
         }
