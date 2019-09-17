@@ -17,6 +17,7 @@ namespace EdgeDriverTest1
 
 
         private ChromeDriver _driver;
+        //private EdgeDriver _driver;
         WebDriverWait wait;
         [TestInitialize]
         public void EdgeDriverInitialize()
