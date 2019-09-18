@@ -118,7 +118,7 @@ pipeline {
          }  
          success {  
              mail bcc: '', 
-                  body: "<b></b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}<br> Build Status: ${evn.BUILD_STATUS}", 
+                  body: "<b></b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}<br> Build Status: ${env.BUILD_STATUS}", 
                   cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', 
                   subject: "Success CI: Project name -> ${env.JOB_NAME}", 
                   to: "arrow.chirag@gmail.com";  
