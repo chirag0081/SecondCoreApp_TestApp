@@ -33,7 +33,7 @@ namespace EdgeDriverTest1
         }
 
         [TestMethod]
-        public void TestMethod_01()
+        public void TestMethod_02()
         {
             _driver.Url = "http://localhost:1001/login";
             _driver.Manage().Window.Maximize();
@@ -46,19 +46,21 @@ namespace EdgeDriverTest1
             IWebElement elementNext = _driver.FindElementByClassName("btn");
             elementNext.Click();
             
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(1000);
 
             IList<IWebElement> webElementsLinks = _driver.FindElementsByClassName("nav-link");
             Assert.AreEqual(3, webElementsLinks.Count);
             Assert.AreEqual("List", webElementsLinks[0].Text);
             Assert.AreEqual("Create", webElementsLinks[1].Text);
+            System.Threading.Thread.Sleep(1000);
             Assert.AreEqual("Logout abc@gmail.com", webElementsLinks[2].Text);
             System.Threading.Thread.Sleep(1000);
+
         }
 
         [TestMethod]
        
-        public void TestMethod_02()
+        public void TestMethod_01()
         {
             // Replace with your own test logic
             _driver.Url = "http://localhost:1001/";
